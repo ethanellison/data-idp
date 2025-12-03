@@ -14,7 +14,7 @@ spec:
     path: charts/backstage
     helm:
       valueFiles:
-        - environments/dev/backstage-values.yaml # Environment-specific overrides
+        - ../environments/dev/backstage-values.yaml # Environment-specific overrides
   destination:
     server: https://kubernetes.default.svc
     namespace: backstage # Target namespace for Backstage
