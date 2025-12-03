@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "kind",
+    "kubectl",
+    "helm",
+    "k9s"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to the Data IDP Devbox environment.'",
+      "echo 'Run ./scripts/kind-init.sh to start the local cluster.'"
+    ]
+  }
+}
