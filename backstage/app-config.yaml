@@ -20,7 +20,7 @@ catalog:
   locations:
     # Register the data-services catalog
     - type: url
-      target: https://github.com/YOUR_ORG/YOUR_REPO/blob/main/data-services/*/catalog-info.yaml
+      target: https://github.com/ethanellison/data-idp/blob/main/data-services/*/catalog-info.yaml
       rules:
         - allow: [Component]
 

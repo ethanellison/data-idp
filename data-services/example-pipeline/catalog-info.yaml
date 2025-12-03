@@ -10,7 +10,7 @@ metadata:
     - pipeline
     - argocd
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/YOUR_ORG/YOUR_REPO/tree/main/data-services/example-pipeline
+    backstage.io/techdocs-ref: url:https://github.com/ethanellison/data-idp/tree/main/data-services/example-pipeline
     argocd/app-name: example-data-pipeline-dev
     argocd/app-selector: app.kubernetes.io/instance=example-data-pipeline
 spec:

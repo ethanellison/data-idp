@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_ORG/YOUR_REPO.git # Replace with your repo URL
+    repoURL: https://github.com/ethanellison/data-idp.git # Replace with your repo URL
     targetRevision: HEAD
     path: charts/backstage
     helm:
