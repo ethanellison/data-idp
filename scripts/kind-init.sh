@@ -2,12 +2,12 @@
 set -euo pipefail
 
 CLUSTER_NAME="data-idp-dev"
-K8S_VERSION="1.27" # Use a stable, recent version
+K8S_VERSION="1.33" # Use a stable, recent version/
 
-echo "Starting kind cluster: ${CLUSTER_NAME} (Kubernetes v${K8S_VERSION})"
+echo "Starting kind cluster: ${CLUSTER_NAME}"
 
 # 1. Create kind cluster
-kind create cluster --name "${CLUSTER_NAME}" --image "kindest/node:v${K8S_VERSION}"
+kind create cluster --name "${CLUSTER_NAME}"
 
 echo "Waiting for cluster to be ready..."
 kubectl wait --for=condition=Ready node/${CLUSTER_NAME}-control-plane --timeout=300s
