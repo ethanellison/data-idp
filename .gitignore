@@ -1,0 +1,18 @@
+# Dependencies
+/node_modules
+/dist
+/build
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.env
+.env.*
+
+# Backstage
+backstage/packages/app/dist
+backstage/packages/backend/dist
+backstage/packages/backend/node_modules
+backstage/packages/app/node_modules

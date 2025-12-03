@@ -1,0 +1,22 @@
+# data-services/example-pipeline/catalog-info.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-data-pipeline
+  description: An example ETL pipeline for data developers.
+  tags:
+    - data
+    - etl
+    - pipeline
+    - argocd
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/YOUR_ORG/YOUR_REPO/tree/main/data-services/example-pipeline
+    argocd/app-name: example-data-pipeline-dev
+    argocd/app-selector: app.kubernetes.io/instance=example-data-pipeline
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:data-team
+  system: data-platform
+  providesApis:
+    - example-data-api

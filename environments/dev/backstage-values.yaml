@@ -1,0 +1,5 @@
+# environments/dev/backstage-values.yaml
+# Environment-specific overrides for Backstage
+replicaCount: 1
+image:
+  tag: "1.27.0" # Pin to a specific version for stability

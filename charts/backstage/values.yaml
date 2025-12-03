@@ -1,0 +1,15 @@
+# charts/backstage/values.yaml
+replicaCount: 1
+
+image:
+  repository: backstage/backstage
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 7007
+
+config:
+  # Reference to the app-config.yaml in the repo
+  appConfigPath: ../../backstage/app-config.yaml

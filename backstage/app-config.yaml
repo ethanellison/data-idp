@@ -1,0 +1,40 @@
+# backstage/app-config.yaml
+app:
+  title: Data Developer IDP
+  baseUrl: http://localhost:7007
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+  csp:
+    connect-src: ["'self'", 'http:', 'https:']
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, POST, PUT, DELETE]
+    credentials: true
+
+catalog:
+  rules:
+    - allow: [Component, System, API, Resource, Location]
+  locations:
+    # Register the data-services catalog
+    - type: url
+      target: https://github.com/YOUR_ORG/YOUR_REPO/blob/main/data-services/*/catalog-info.yaml
+      rules:
+        - allow: [Component]
+
+integrations:
+  github:
+    - host: github.com
+      # Replace with your GitHub token
+      token: ${GITHUB_TOKEN}
+
+# Highlight the data domain
+techdocs:
+  builder: 'external'
+  generator:
+    runIn: 'local'
+  publisher:
+    type: 'local'
+
