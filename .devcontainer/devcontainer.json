@@ -1,16 +1,17 @@
 {
-  "name": "Devbox Remote Container",
-  "build": {
-    "dockerfile": "./Dockerfile",
-    "context": ".."
+  "name": "data-idp Devcontainer",
+  "build": { "dockerfile": "Dockerfile" },
+  "workspaceFolder": "/workspaces/data-idp",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/data-idp,type=bind,consistency=cached",
+  "runArgs": [
+    "-v", "/var/run/docker.sock:/var/run/docker.sock"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "customizations": {
-    "vscode": {
-      "settings": {},
-      "extensions": [
-        "jetpack-io.devbox"
-      ]
-    }
-  },
-  "remoteUser": "devbox"
+  "postCreateCommand": "echo 'Welcome to the Data IDP Devbox environment.' >> /home/vscode/.bashrc && echo 'Run ./scripts/kind-init.sh to start the local cluster.' >> /home/vscode/.bashrc && sudo chown -R vscode:vscode /workspaces/data-idp",
+  "extensions": [
+    "ms-azuretools.vscode-docker"
+  ],
+  "remoteUser": "vscode"
 }
