@@ -3,7 +3,9 @@
     "kind",
     "kubectl",
     "helm",
-    "k9s"
+    "k9s",
+    "nodejs@latest",
+    "yarn@latest"
   ],
   "shell": {
     "init_hook": [
